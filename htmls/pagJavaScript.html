@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Lenguaje de Programación</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/info-pages.css">
+</head>
+<body>
+<!-- Enlace para usuarios de teclado -->
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Volver al inicio">
+            <svg class="logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect width="24" height="24" rx="4" fill="#1e3a8a"></rect>
+                <path d="M6 17L10 7l4 10 4-6" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="site-title">Introducción al Diseño Web</span>
+        </a>
+
+        <nav class="breadcrumb" aria-label="Navegación de ruta">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">JavaScript</span>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="main-content" class="info-page" role="main">
+    <div class="container">
+
+        <!-- Hero de la página -->
+        <div class="page-hero">
+            <div class="hero-icon js-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="2" width="20" height="20" rx="3" stroke="#F0DB4F" stroke-width="1.5" fill="#F0DB4F" opacity="0.2"/>
+                    <text x="12" y="17" text-anchor="middle" fill="#F0DB4F" font-size="14" font-weight="bold">JS</text>
+                </svg>
+            </div>
+            <h1>JavaScript - Lenguaje de Programación</h1>
+            <p class="lead">El lenguaje que añade interactividad y comportamiento dinámico a las páginas web</p>
+        </div>
+
+        <!-- Contenido principal -->
+        <article class="info-content">
+
+            <section class="content-section">
+                <h2>¿Qué es JavaScript?</h2>
+                <p>
+                    <strong>JavaScript</strong> es el lenguaje de programación de la web. Permite crear contenido
+                    dinámico, controlar multimedia, animar imágenes, validar formularios, y prácticamente todo lo que
+                    involucre interacción con el usuario. Es el tercer pilar fundamental del desarrollo web junto con HTML y CSS.
+                </p>
+                <p>
+                    Creado en 1995, JavaScript ha evolucionado enormemente. Hoy es uno de los lenguajes más populares
+                    del mundo, usado tanto en el navegador (frontend) como en servidores (backend con Node.js), aplicaciones
+                    móviles, desktop, IoT y más.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Características principales</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>🎯 Manipulación del DOM</h3>
+                        <p>Modifica el contenido, estructura y estilos de la página en tiempo real.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>⚡ Manejo de Eventos</h3>
+                        <p>Responde a acciones del usuario como clicks, formularios, teclas y más.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🔄 Asincronía</h3>
+                        <p>Realiza múltiples tareas sin bloquear la interfaz usando Promises y async/await.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🌐 APIs del Navegador</h3>
+                        <p>Accede a funcionalidades como geolocalización, almacenamiento local y más.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Sintaxis básica de JavaScript</h2>
+                <p>JavaScript es un lenguaje de tipado dinámico con sintaxis similar a C:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Fundamentos de JavaScript</span>
+                        <span class="code-lang">JavaScript</span>
+                    </div>
+                    <pre><code>// Variables
+const nombre = "Juan";        // Constante (no cambia)
+let edad = 25;                // Variable (puede cambiar)
+var antiguaVariable = "viejo"; // Evitar usar var
+
+// Tipos de datos
+const numero = 42;
+const texto = "Hola mundo";
+const booleano = true;
+const arreglo = [1, 2, 3, 4, 5];
+const objeto = {
+    nombre: "Ana",
+    edad: 30,
+    activo: true
+};
+
+// Funciones tradicionales
+function saludar(nombre) {
+    return `Hola, ${nombre}!`;
+}
+
+// Arrow functions (funciones flecha)
+const sumar = (a, b) => a + b;
+
+// Condicionales
+if (edad >= 18) {
+    console.log("Mayor de edad");
+} else {
+    console.log("Menor de edad");
+}
+
+// Bucles
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+arreglo.forEach(item => {
+    console.log(item);
+});</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Manipulación del DOM</h2>
+                <p>El DOM (Document Object Model) es la representación en JavaScript del HTML. Puedes seleccionar y modificar elementos:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Seleccionar y modificar elementos</span>
+                        <span class="code-lang">JavaScript</span>
+                    </div>
+                    <pre><code>// Seleccionar elementos
+const titulo = document.querySelector('h1');
+const botones = document.querySelectorAll('.btn');
+const form = document.getElementById('contact-form');
+
+// Modificar contenido
+titulo.textContent = "Nuevo título";
+titulo.innerHTML = "&lt;strong&gt;Título en negrita&lt;/strong&gt;";
+
+// Modificar estilos
+titulo.style.color = "#0ea5ff";
+titulo.style.fontSize = "2rem";
+
+// Agregar/quitar clases
+titulo.classList.add('activo');
+titulo.classList.remove('inactivo');
+titulo.classList.toggle('destacado');
+
+// Crear elementos nuevos
+const nuevoParrafo = document.createElement('p');
+nuevoParrafo.textContent = "Nuevo párrafo";
+document.body.appendChild(nuevoParrafo);
+
+// Eliminar elementos
+const elemento = document.querySelector('.eliminar');
+elemento.remove();</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Manejo de Eventos</h2>
+                <p>Los eventos permiten que tu código responda a acciones del usuario:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Event Listeners</span>
+                        <span class="code-lang">JavaScript</span>
+                    </div>
+                    <pre><code>// Click en un botón
+const boton = document.querySelector('.btn');
+boton.addEventListener('click', () => {
+    alert('¡Botón clickeado!');
+});
+
+// Submit de formulario
+const formulario = document.querySelector('#contact-form');
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault(); // Prevenir envío por defecto
+
+    const nombre = document.querySelector('#nombre').value;
+    const email = document.querySelector('#email').value;
+
+    console.log(`Nombre: ${nombre}, Email: ${email}`);
+});
+
+// Hover sobre elemento
+const tarjeta = document.querySelector('.card');
+tarjeta.addEventListener('mouseenter', () => {
+    tarjeta.style.transform = 'scale(1.05)';
+});
+
+tarjeta.addEventListener('mouseleave', () => {
+    tarjeta.style.transform = 'scale(1)';
+});
+
+// Tecla presionada
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        cerrarModal();
+    }
+});
+
+// Scroll de la página
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    console.log(`Scroll: ${scrollY}px`);
+});</code></pre>
+                </div>
+
+                <div class="tag-list">
+                    <div class="tag-item">
+                        <strong>click</strong>
+                        <p>Se dispara cuando el usuario hace click en un elemento</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>submit</strong>
+                        <p>Se dispara cuando se envía un formulario</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>change / input</strong>
+                        <p>Se dispara cuando cambia el valor de un input</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>keydown / keyup</strong>
+                        <p>Se dispara cuando se presiona o suelta una tecla</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>mouseenter / mouseleave</strong>
+                        <p>Se dispara cuando el mouse entra o sale de un elemento</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Validación de formularios</h2>
+                <p>Ejemplo práctico de validación de un formulario de contacto:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Validar formulario</span>
+                        <span class="code-lang">JavaScript</span>
+                    </div>
+                    <pre><code>const form = document.querySelector('#contact-form');
+const nombreInput = document.querySelector('#nombre');
+const emailInput = document.querySelector('#email');
+const mensajeInput = document.querySelector('#mensaje');
+const feedback = document.querySelector('#form-feedback');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Limpiar errores previos
+    limpiarErrores();
+
+    let errores = [];
+
+    // Validar nombre
+    if (nombreInput.value.trim().length < 2) {
+        errores.push('El nombre debe tener al menos 2 caracteres');
+        nombreInput.classList.add('is-error');
+    }
+
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
+        errores.push('El email no es válido');
+        emailInput.classList.add('is-error');
+    }
+
+    // Validar mensaje
+    if (mensajeInput.value.trim().length < 10) {
+        errores.push('El mensaje debe tener al menos 10 caracteres');
+        mensajeInput.classList.add('is-error');
+    }
+
+    // Mostrar errores o éxito
+    if (errores.length > 0) {
+        mostrarErrores(errores);
+    } else {
+        mostrarExito();
+        enviarFormulario();
+    }
+});
+
+function limpiarErrores() {
+    nombreInput.classList.remove('is-error', 'is-success');
+    emailInput.classList.remove('is-error', 'is-success');
+    mensajeInput.classList.remove('is-error', 'is-success');
+    feedback.hidden = true;
+}
+
+function mostrarErrores(errores) {
+    feedback.hidden = false;
+    feedback.className = 'form-feedback feedback-error';
+    feedback.innerHTML = errores.join('&lt;br&gt;');
+}
+
+function mostrarExito() {
+    feedback.hidden = false;
+    feedback.className = 'form-feedback feedback-success';
+    feedback.textContent = '¡Formulario enviado con éxito!';
+
+    nombreInput.classList.add('is-success');
+    emailInput.classList.add('is-success');
+    mensajeInput.classList.add('is-success');
+}
+
+function enviarFormulario() {
+    // Aquí iría el código para enviar al servidor
+    console.log('Enviando formulario...');
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Fetch API - Peticiones HTTP</h2>
+                <p>Realiza peticiones a servidores para obtener o enviar datos:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Fetch con async/await</span>
+                        <span class="code-lang">JavaScript</span>
+                    </div>
+                    <pre><code>// GET: Obtener datos
+async function obtenerUsuarios() {
+    try {
+        const respuesta = await fetch('https://api.ejemplo.com/usuarios');
+
+        if (!respuesta.ok) {
+            throw new Error('Error en la petición');
+        }
+
+        const datos = await respuesta.json();
+        console.log(datos);
+        mostrarUsuarios(datos);
+
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarError('No se pudieron cargar los usuarios');
+    }
+}
+
+// POST: Enviar datos
+async function crearUsuario(usuario) {
+    try {
+        const respuesta = await fetch('https://api.ejemplo.com/usuarios', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(usuario)
+        });
+
+        const datos = await respuesta.json();
+        console.log('Usuario creado:', datos);
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Uso
+obtenerUsuarios();
+
+crearUsuario({
+    nombre: 'Ana García',
+    email: 'ana@ejemplo.com'
+});</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section highlight-section">
+                <h2>¿Por qué es importante JavaScript?</h2>
+                <div class="importance-grid">
+                    <div class="importance-item">
+                        <span class="importance-number">1</span>
+                        <div>
+                            <h3>Interactividad</h3>
+                            <p>JavaScript convierte sitios estáticos en aplicaciones web interactivas y dinámicas que responden a las acciones del usuario.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">2</span>
+                        <div>
+                            <h3>Experiencia de usuario</h3>
+                            <p>Permite validar datos antes de enviarlos, cargar contenido sin recargar la página y crear interfaces fluidas.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">3</span>
+                        <div>
+                            <h3>Versatilidad</h3>
+                            <p>Un solo lenguaje para frontend, backend, móvil, desktop y más. Es la base del desarrollo web moderno.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Recursos para aprender más</h2>
+                <ul class="resources-list">
+                    <li>
+                        <strong>MDN Web Docs:</strong>
+                        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" rel="noopener">
+                            Documentación completa de JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <strong>JavaScript.info:</strong>
+                        <a href="https://es.javascript.info/" target="_blank" rel="noopener">
+                            Tutorial moderno de JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <strong>freeCodeCamp:</strong>
+                        <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener">
+                            Curso interactivo gratuito
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Eloquent JavaScript:</strong>
+                        <a href="https://eloquentjavascript.net/" target="_blank" rel="noopener">
+                            Libro gratuito sobre JavaScript
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <!-- Navegación entre páginas -->
+        <nav class="page-navigation" aria-label="Navegación entre tecnologías">
+            <a href="pagCss.html" class="nav-btn back-btn">
+                ← Anterior: CSS
+            </a>
+            <a href="../index.html" class="nav-btn next-btn">
+                Volver al inicio →
+            </a>
+        </nav>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p>Práctica: Diseño de sitios web estáticos • HTML, CSS y JavaScript • &copy; 2025</p>
+        <p class="small">Diseñado con buenas prácticas de accesibilidad y responsividad.</p>
+    </div>
+</footer>
+
+</body>
+</html>

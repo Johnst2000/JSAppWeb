@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - HyperText Markup Language</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/info-pages.css">
+</head>
+<body>
+<!-- Enlace para usuarios de teclado -->
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Volver al inicio">
+            <svg class="logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect width="24" height="24" rx="4" fill="#1e3a8a"></rect>
+                <path d="M6 17L10 7l4 10 4-6" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="site-title">Introducción al Diseño Web</span>
+        </a>
+
+        <nav class="breadcrumb" aria-label="Navegación de ruta">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">HTML</span>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="main-content" class="info-page" role="main">
+    <div class="container">
+
+        <!-- Hero de la página -->
+        <div class="page-hero">
+            <div class="hero-icon html-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 3h16l-1.5 16-6.5 2-6.5-2L4 3z" stroke="#E34F26" stroke-width="1.5" fill="#E34F26" opacity="0.2"/>
+                    <path d="M8 8h8M8 12h8M8 16h5" stroke="#E34F26" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1>HTML - HyperText Markup Language</h1>
+            <p class="lead">El lenguaje fundamental de la web que define la estructura y el contenido de las páginas</p>
+        </div>
+
+        <!-- Contenido principal -->
+        <article class="info-content">
+
+            <section class="content-section">
+                <h2>¿Qué es HTML?</h2>
+                <p>
+                    <strong>HTML</strong> (HyperText Markup Language) es el lenguaje de marcado estándar utilizado para crear
+                    y estructurar contenido en la web. No es un lenguaje de programación, sino un lenguaje de marcado que
+                    utiliza etiquetas para definir diferentes elementos de una página web.
+                </p>
+                <p>
+                    Fue creado por Tim Berners-Lee en 1991 y ha evolucionado hasta HTML5, la versión actual que incluye
+                    soporte para multimedia, gráficos y aplicaciones web modernas.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Características principales</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>🏗️ Estructura Semántica</h3>
+                        <p>Usa etiquetas que describen el significado del contenido, no solo su apariencia.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>♿ Accesibilidad</h3>
+                        <p>Permite crear sitios accesibles para todos los usuarios, incluyendo personas con discapacidades.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🔍 SEO Optimizado</h3>
+                        <p>Los motores de búsqueda comprenden mejor el contenido estructurado correctamente.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🌐 Estándar Universal</h3>
+                        <p>Funciona en todos los navegadores y dispositivos sin necesidad de plugins.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Etiquetas semánticas importantes</h2>
+                <p>HTML5 introdujo etiquetas semánticas que describen claramente el propósito de cada sección:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Estructura básica semántica</span>
+                        <span class="code-lang">HTML</span>
+                    </div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi Sitio Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;!-- Encabezado de la página --&gt;
+        &lt;nav&gt;
+            &lt;!-- Menú de navegación --&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;!-- Contenido principal --&gt;
+        &lt;article&gt;
+            &lt;!-- Contenido independiente --&gt;
+            &lt;section&gt;
+                &lt;!-- Sección temática --&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;
+
+        &lt;aside&gt;
+            &lt;!-- Contenido relacionado --&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;!-- Pie de página --&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="tag-list">
+                    <div class="tag-item">
+                        <strong>&lt;header&gt;</strong>
+                        <p>Encabezado de la página o de una sección</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;nav&gt;</strong>
+                        <p>Bloque de navegación principal del sitio</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;main&gt;</strong>
+                        <p>Contenido principal único de la página</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;article&gt;</strong>
+                        <p>Contenido independiente que puede ser reutilizado</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;section&gt;</strong>
+                        <p>Agrupación temática de contenido</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;aside&gt;</strong>
+                        <p>Contenido tangencialmente relacionado</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>&lt;footer&gt;</strong>
+                        <p>Pie de página o de una sección</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Ejemplo práctico: Tarjeta de producto</h2>
+
+                <div class="example-container">
+                    <div class="example-preview">
+                        <h3>Vista previa</h3>
+                        <div class="product-card-example">
+                            <img src="https://via.placeholder.com/300x200/4299e1/ffffff?text=Producto" alt="Producto ejemplo">
+                            <h4>Nombre del Producto</h4>
+                            <p>Descripción breve del producto que destaca sus características principales.</p>
+                            <p class="price">$99.99</p>
+                            <button>Agregar al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="example-code">
+                        <h3>Código HTML</h3>
+                        <div class="code-block">
+                                <pre><code>&lt;article class="product-card"&gt;
+    &lt;img src="producto.jpg"
+         alt="Nombre del producto"&gt;
+
+    &lt;h2&gt;Nombre del Producto&lt;/h2&gt;
+
+    &lt;p&gt;Descripción breve del producto.&lt;/p&gt;
+
+    &lt;p class="price"&gt;$99.99&lt;/p&gt;
+
+    &lt;button type="button"&gt;
+        Agregar al carrito
+    &lt;/button&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section highlight-section">
+                <h2>¿Por qué es importante HTML?</h2>
+                <div class="importance-grid">
+                    <div class="importance-item">
+                        <span class="importance-number">1</span>
+                        <div>
+                            <h3>Base sólida</h3>
+                            <p>Un HTML bien estructurado es la base de cualquier sitio web profesional y facilita el mantenimiento del código.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">2</span>
+                        <div>
+                            <h3>Mejor accesibilidad</h3>
+                            <p>Las etiquetas semánticas ayudan a los lectores de pantalla y otras tecnologías asistivas a interpretar el contenido.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">3</span>
+                        <div>
+                            <h3>SEO mejorado</h3>
+                            <p>Los motores de búsqueda priorizan sitios con HTML semántico y bien estructurado.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Recursos para aprender más</h2>
+                <ul class="resources-list">
+                    <li>
+                        <strong>MDN Web Docs:</strong>
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">
+                            Documentación completa de HTML
+                        </a>
+                    </li>
+                    <li>
+                        <strong>W3C:</strong>
+                        <a href="https://www.w3.org/html/" target="_blank" rel="noopener">
+                            Estándares oficiales de HTML
+                        </a>
+                    </li>
+                    <li>
+                        <strong>HTML5 Doctor:</strong>
+                        <a href="http://html5doctor.com/" target="_blank" rel="noopener">
+                            Guías sobre etiquetas HTML5
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <!-- Navegación entre páginas -->
+        <nav class="page-navigation" aria-label="Navegación entre tecnologías">
+            <a href="../index.html" class="nav-btn back-btn">
+                ← Volver al inicio
+            </a>
+            <a href="pagCss.html" class="nav-btn next-btn">
+                Siguiente: CSS →
+            </a>
+        </nav>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p>Práctica: Diseño de sitios web estáticos • HTML, CSS y JavaScript • &copy; 2025</p>
+        <p class="small">Diseñado con buenas prácticas de accesibilidad y responsividad.</p>
+    </div>
+</footer>
+
+</body>
+</html>

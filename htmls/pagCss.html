@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Cascading Style Sheets</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/info-pages.css">
+</head>
+<body>
+<!-- Enlace para usuarios de teclado -->
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Volver al inicio">
+            <svg class="logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect width="24" height="24" rx="4" fill="#1e3a8a"></rect>
+                <path d="M6 17L10 7l4 10 4-6" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="site-title">Introducción al Diseño Web</span>
+        </a>
+
+        <nav class="breadcrumb" aria-label="Navegación de ruta">
+            <a href="../index.html">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">CSS</span>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="main-content" class="info-page" role="main">
+    <div class="container">
+
+        <!-- Hero de la página -->
+        <div class="page-hero">
+            <div class="hero-icon css-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 3h16l-1.5 16-6.5 2-6.5-2L4 3z" stroke="#3B82F6" stroke-width="1.5" fill="#3B82F6" opacity="0.2"/>
+                    <path d="M12 5v14M8 9h8M7 13h10M8 17h8" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1>CSS - Cascading Style Sheets</h1>
+            <p class="lead">El lenguaje que controla la presentación visual y el diseño de las páginas web</p>
+        </div>
+
+        <!-- Contenido principal -->
+        <article class="info-content">
+
+            <section class="content-section">
+                <h2>¿Qué es CSS?</h2>
+                <p>
+                    <strong>CSS</strong> (Cascading Style Sheets u Hojas de Estilo en Cascada) es el lenguaje utilizado
+                    para describir la presentación de documentos HTML. Define colores, tipografías, espaciados,
+                    diseños de página y animaciones que transforman el contenido estructurado en experiencias visuales atractivas.
+                </p>
+                <p>
+                    CSS3, la versión actual, incluye características avanzadas como Flexbox, Grid, animaciones,
+                    transformaciones, variables CSS y mucho más, permitiendo crear diseños modernos y responsivos sin necesidad de JavaScript.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Características principales</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>📱 Diseño Responsivo</h3>
+                        <p>Adapta automáticamente el diseño a diferentes tamaños de pantalla y dispositivos.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🎨 Control Visual Total</h3>
+                        <p>Define colores, tipografías, espaciados y efectos visuales con precisión.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>⚡ Flexbox y Grid</h3>
+                        <p>Sistemas modernos de layout que simplifican diseños complejos.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🔄 Animaciones CSS</h3>
+                        <p>Crea transiciones y animaciones fluidas sin necesidad de JavaScript.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Sintaxis básica de CSS</h2>
+                <p>CSS utiliza selectores para apuntar a elementos HTML y aplicarles estilos:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Anatomía de una regla CSS</span>
+                        <span class="code-lang">CSS</span>
+                    </div>
+                    <pre><code>/* Selector: apunta al elemento */
+selector {
+    /* Propiedad: valor; */
+    color: #0ea5ff;
+    font-size: 16px;
+    margin: 20px;
+}
+
+/* Ejemplo real */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+/* Selector de clase múltiple */
+.btn.primary {
+    background: linear-gradient(90deg, #0ea5ff, #0b74c9);
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Flexbox - Layout flexible</h2>
+                <p>Flexbox es un sistema de layout unidimensional perfecto para alinear elementos en filas o columnas:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Ejemplo de Flexbox</span>
+                        <span class="code-lang">CSS</span>
+                    </div>
+                    <pre><code>/* Contenedor flex */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaciado horizontal */
+    align-items: center;             /* Alineación vertical */
+    gap: 1rem;                       /* Espacio entre elementos */
+    flex-wrap: wrap;                 /* Permite saltos de línea */
+}
+
+/* Items flex */
+.item {
+    flex: 1;              /* Crece para llenar el espacio */
+    min-width: 200px;     /* Ancho mínimo */
+}
+
+/* Ejemplo: Header con logo y navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}</code></pre>
+                </div>
+
+                <div class="tag-list">
+                    <div class="tag-item">
+                        <strong>justify-content</strong>
+                        <p>Alinea elementos en el eje principal (horizontal): flex-start, center, space-between, space-around</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>align-items</strong>
+                        <p>Alinea elementos en el eje cruzado (vertical): flex-start, center, flex-end, stretch</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>flex-wrap</strong>
+                        <p>Permite que los elementos salten a una nueva línea: nowrap, wrap, wrap-reverse</p>
+                    </div>
+                    <div class="tag-item">
+                        <strong>gap</strong>
+                        <p>Define el espacio entre elementos flex sin usar márgenes</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>CSS Grid - Layout bidimensional</h2>
+                <p>Grid es perfecto para layouts complejos con filas y columnas:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Ejemplo de CSS Grid</span>
+                        <span class="code-lang">CSS</span>
+                    </div>
+                    <pre><code>/* Grid básico de 3 columnas */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+    gap: 2rem;
+}
+
+/* Grid responsivo con auto-fit */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Grid con áreas nombradas */
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 1rem;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Variables CSS (Custom Properties)</h2>
+                <p>Las variables CSS permiten reutilizar valores y crear temas fácilmente:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Variables CSS</span>
+                        <span class="code-lang">CSS</span>
+                    </div>
+                    <pre><code>/* Definir variables en :root */
+:root {
+    --color-primary: #0ea5ff;
+    --color-secondary: #0b74c9;
+    --spacing-unit: 1rem;
+    --border-radius: 10px;
+    --transition-speed: 260ms;
+}
+
+/* Usar variables */
+.button {
+    background: var(--color-primary);
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+}
+
+/* Tema oscuro */
+.theme-dark {
+    --bg-color: #071227;
+    --text-color: #e9f1f7;
+}
+
+/* Tema claro */
+.theme-light {
+    --bg-color: #f7fafc;
+    --text-color: #0b1220;
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Media Queries - Diseño responsivo</h2>
+                <p>Adapta tu diseño a diferentes tamaños de pantalla:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Media Queries</span>
+                        <span class="code-lang">CSS</span>
+                    </div>
+                    <pre><code>/* Mobile First: estilo base para móviles */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Tablets: a partir de 768px */
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: a partir de 1024px */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="content-section highlight-section">
+                <h2>¿Por qué es importante CSS?</h2>
+                <div class="importance-grid">
+                    <div class="importance-item">
+                        <span class="importance-number">1</span>
+                        <div>
+                            <h3>Experiencia visual</h3>
+                            <p>CSS transforma contenido básico en experiencias visuales atractivas y profesionales que capturan la atención del usuario.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">2</span>
+                        <div>
+                            <h3>Diseño adaptable</h3>
+                            <p>Permite crear sitios que se ven perfectos en cualquier dispositivo, desde móviles hasta pantallas grandes.</p>
+                        </div>
+                    </div>
+                    <div class="importance-item">
+                        <span class="importance-number">3</span>
+                        <div>
+                            <h3>Mantenimiento eficiente</h3>
+                            <p>Separar estilos del contenido facilita actualizar el diseño sin tocar el HTML.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Recursos para aprender más</h2>
+                <ul class="resources-list">
+                    <li>
+                        <strong>MDN Web Docs:</strong>
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener">
+                            Documentación completa de CSS
+                        </a>
+                    </li>
+                    <li>
+                        <strong>CSS-Tricks:</strong>
+                        <a href="https://css-tricks.com/" target="_blank" rel="noopener">
+                            Tutoriales y trucos de CSS
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Flexbox Froggy:</strong>
+                        <a href="https://flexboxfroggy.com/#es" target="_blank" rel="noopener">
+                            Aprende Flexbox jugando
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Grid Garden:</strong>
+                        <a href="https://cssgridgarden.com/#es" target="_blank" rel="noopener">
+                            Aprende CSS Grid jugando
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <!-- Navegación entre páginas -->
+        <nav class="page-navigation" aria-label="Navegación entre tecnologías">
+            <a href="pagHtml.html" class="nav-btn back-btn">
+                ← Anterior: HTML
+            </a>
+            <a href="pagJavaScript.html" class="nav-btn next-btn">
+                Siguiente: JavaScript →
+            </a>
+        </nav>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p>Práctica: Diseño de sitios web estáticos • HTML, CSS y JavaScript • &copy; 2025</p>
+        <p class="small">Diseñado con buenas prácticas de accesibilidad y responsividad.</p>
+    </div>
+</footer>
+
+</body>
+</html>
