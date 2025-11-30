@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const feedback = document.getElementById("form-feedback");
 
     form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Detiene envío hasta validar
+        event.preventDefault();
 
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Validaciones
         if (nombre.length < 2) {
             mostrarMensaje("❌ El nombre debe tener al menos 2 caracteres.", "error");
             return;
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Si todo está bien → enviar el formulario
         mostrarMensaje("✔ ¡Formulario enviado correctamente!", "exito");
 
         setTimeout(() => {

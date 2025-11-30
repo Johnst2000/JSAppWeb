@@ -1,10 +1,8 @@
-/* Página de información */
 .info-page {
     padding: 2rem 0 4rem;
     background: linear-gradient(180deg, var(--bg-900) 0%, var(--bg-800) 100%);
 }
 
-/* Hero de la página */
 .page-hero {
     text-align: center;
     padding: 3rem 0;
@@ -51,7 +49,6 @@
     line-height: 1.6;
 }
 
-/* Contenido de la página */
 .info-content {
     max-width: var(--max-content-width);
     margin: 0 auto;
@@ -80,7 +77,6 @@
     margin-bottom: 1rem;
 }
 
-/* Grid de características */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -114,7 +110,6 @@
     margin: 0;
 }
 
-/* Bloques de código */
 .code-block {
     background: rgba(2,6,23,0.8);
     border-radius: 10px;
@@ -159,7 +154,6 @@
     color: #cfeffd;
 }
 
-/* Lista de etiquetas */
 .tag-list {
     display: grid;
     gap: 1rem;
@@ -191,7 +185,6 @@
     color: var(--muted);
 }
 
-/* Contenedor de ejemplo */
 .example-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -214,7 +207,6 @@
     margin-bottom: 1rem;
 }
 
-/* Ejemplo de tarjeta de producto */
 .product-card-example {
     background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
     border: 1px solid rgba(255,255,255,0.06);
@@ -267,7 +259,6 @@
     box-shadow: 0 8px 24px rgba(14,165,255,0.12);
 }
 
-/* Sección destacada */
 .highlight-section {
     background: linear-gradient(135deg, rgba(14,165,255,0.08), rgba(11,74,138,0.05));
     border: 1px solid rgba(14,165,255,0.12);
@@ -312,7 +303,6 @@
     margin: 0;
 }
 
-/* Lista de recursos */
 .resources-list {
     list-style: none;
     padding: 0;
@@ -350,7 +340,6 @@
     text-decoration: underline;
 }
 
-/* Navegación entre páginas */
 .page-navigation {
     display: flex;
     justify-content: space-between;
@@ -393,7 +382,6 @@
     box-shadow: 0 8px 24px rgba(14,165,255,0.12);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .page-hero h1 {
         font-size: 2rem;
@@ -435,7 +423,6 @@
     }
 }
 
-/* Modo de movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
