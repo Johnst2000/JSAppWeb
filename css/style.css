@@ -105,7 +105,7 @@ body{
     display: inline-block;
     box-shadow: 0 10px 28px rgba(2, 6, 23, 0.35);
 
-    background: linear-gradient(135deg, var(--accent-600), var(--accent-300));
+    background: linear-gradient(135deg, var(--accent-600), var(--accent-400));
 
 }
 
