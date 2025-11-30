@@ -105,7 +105,7 @@ body{
     background: linear-gradient(135deg, var(--accent-600), var(--accent-400));
 }
 
-.site-title { font-weight:700; font-size:3.05rem; letter-spacing: 0.2px; }
+.site-title { font-weight:700; font-size:2.25rem; letter-spacing: 0.2px; }
 
 .nav-toggle { background: transparent; border:0; color:var(--text); width:44px; height:44px; border-radius:10px; cursor:pointer; }
 .nav-toggle:focus { box-shadow: var(--focus-ring); outline:none; }
